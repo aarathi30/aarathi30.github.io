@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Aarathi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #333;
+      text-align: center;
+    }
+
+    .password-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    }
+
+    .password-box {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .password-box input {
+      padding: 10px;
+      width: 200px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .password-box button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .content {
+      display: none;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #ff2e63;
+    }
+
+    .poem {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 15px 0;
+      line-height: 1.6;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .gallery {
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      .poem {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Password Screen -->
+  <div class="password-screen" id="passwordScreen">
+    <div class="password-box">
+      <h2>Enter Password 🎂</h2>
+      <input type="password" id="passwordInput" placeholder="Password">
+      <br>
+      <button onclick="checkPassword()">Unlock</button>
+      <p id="errorMsg" style="color:red;display:none;">Wrong password, try again!</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content" id="content">
+    <h1>🎉 Happy Birthday Aarathi 🎉</h1>
+    <h3>30th September</h3>
+
+    <div class="poem">
+      <p>
+        Our gang's got a new face, a sweet surprise,<br>
+        You joined us late, but won our hearts with your wise,<br>
+        Like a granny's tales, your stories unfold,<br>
+        We gather 'round, young and old.
+      </p>
+      <p>
+        You're our pet, our dear, our gang's delight,<br>
+        With stories and laughter, you shine so bright,<br>
+        We're glad you're here, a part of our crew,<br>
+        Together we'll share memories, old and new.
+      </p>
+    </div>
+
+    <div class="poem">
+      <p>
+        On your special day, we gather near,<br>
+        Though you're far, you're always dear.<br>
+        We miss you here, in our gang's fun,<br>
+        But memories of you are never done.
+      </p>
+      <p>
+        Your stories like granny's tales so bright,<br>
+        Still echo in our hearts, day and night.<br>
+        We wish you a happy birthday today,<br>
+        May it be filled with joy in every way.
+      </p>
+    </div>
+
+    <h2>📸 Memories Gallery</h2>
+    <div class="gallery">
+      <img src="1.jpeg" alt="Memory 1">
+      <img src="2.jpeg" alt="Memory 2">
+      <img src="3.jpeg" alt="Memory 3">
+      <img src="4.jpeg" alt="Memory 4">
+      <img src="5.jpeg" alt="Memory 5">
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const correctPassword = "Aarathi30"; // 🔑 Set your password here
+      if (input === correctPassword) {
+        document.getElementById("passwordScreen").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      } else {
+        document.getElementById("errorMsg").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
